@@ -67,7 +67,7 @@ def create_pairs():
     # collect 1 training example per painting with different artists
     diff_pairs = []
     for painting in data[artistID]:
-      rand_artist = choice(artists)
+      rand_artist = choice(artists) # TODO: Weight prolific artists
       while rand_artist == artistID:
         rand_artist = choice(artists)
       rand_painting = choice(data[rand_artist])
